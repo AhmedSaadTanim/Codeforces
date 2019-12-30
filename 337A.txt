@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m,a[1000],j;
+    cin>>n>>m;
+    for(int i=0;i<m;i++)
+    {
+        cin>>a[i];
+    }
+    sort(a,a+m);
+    int x=9999;
+    for(int i=0,j=n-1;j<m;i++,j++)
+    {
+        x=min(x,(a[j]-a[i]));
+    }
+    cout<<x<<endl;
+    return 0;
+}

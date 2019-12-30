@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    double n,x;
+    cin>>n;
+    long long int m=n;
+    x=ceil(n/2);
+    long long int y=x;
+    if(m%2==0)
+        cout<<y<<endl;
+    else
+        cout<<"-"<<y<<endl;
+    return 0;
+}

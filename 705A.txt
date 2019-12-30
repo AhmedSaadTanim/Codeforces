@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s="I love ",s2="I hate ",s3="that ",s4="it",s5;
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        if(i%2==0)
+        {
+            s5+=s;
+        }
+        else
+        {
+            s5+=s2;
+        }
+        if(i!=n && n!=1)
+        {
+            s5+=s3;
+        }
+    }
+    s5+=s4;
+    cout<<s5<<endl;
+    return 0;
+}

@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    int flag=0;
+    cin>>s;
+    for(int i=0; s[i]!='\0'; i++)
+    {
+        if(flag==1)
+            break;
+        if(s[i]=='h')
+        {
+            for(int j=i+1;s[j]!='\0';j++)
+            {
+                if(flag==1)
+                    break;
+                if(s[j]=='e')
+                {
+                    for(int k=j+1;s[k]!='\0';k++)
+                    {
+                        if(flag==1)
+                            break;
+                        if(s[k]=='l')
+                        {
+                            for(int l=k+1;s[l]!='\0';l++)
+                            {
+                                if(flag==1)
+                                    break;
+                                if(s[l]=='l')
+                                {
+                                    for(int m=l+1;s[m]!='\0';m++)
+                                        if(s[m]=='o')
+                                            {
+                                                flag=1;
+                                                break;
+                                            }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if(flag==0)
+        cout<<"NO"<<endl;
+    else
+        cout<<"YES"<<endl;
+    return 0;
+}

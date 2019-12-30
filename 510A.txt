@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+double a[100005];
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    char x='#';
+    char y='.';
+    for(int i=1; i<=n; i++)
+    {
+        for(int j=1; j<=m; j++)
+        {
+            if(i%2!=0)
+            {
+                cout<<x;
+            }
+            else
+            {
+                if(i%4==0)
+                {
+                    if(j==1)
+                        cout<<x;
+                    else
+                        cout<<y;
+                }
+                else
+                {
+                    if(j!=m)
+                        cout<<y;
+                    else
+                        cout<<x;
+                }
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a1[30],a2[30],a3[30];
+int main()
+{
+    long long int n,m,a[100005],i;
+    cin>>n>>m;
+    for(i=0;i<m;i++)
+        cin>>a[i];
+    long long int res=a[0]-1;
+    for(i=1;i<m;i++)
+    {
+        if(a[i]<a[i-1])
+        {
+            res+=n-a[i-1]+a[i];
+        }
+        else
+            res+=a[i]-a[i-1];
+    }
+    cout<<res<<endl;
+}

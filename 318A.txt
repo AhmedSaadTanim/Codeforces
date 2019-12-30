@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    double n,k,a,b; unsigned long long int x;
+    cin>>n>>k;
+    a=ceil(n/2);
+    b=n-a;
+    if(k>a)
+    {
+        k=k-a;
+        x=k*2;
+        cout<<x<<endl;
+    }
+    else
+    {
+        x=(k*2)-1;
+        cout<<x<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool a[1000];
+int main()
+{
+    int n,p,q; int flag=0;
+    cin>>n>>p;
+    for(int i=0;i<p;i++)
+    {
+        cin>>q;
+        a[q]=1;
+    }
+    cin>>p;
+    for(int i=0;i<p;i++)
+    {
+        cin>>q;
+        a[q]=1;
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(a[i]==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+        cout<<"Oh, my keyboard!"<<endl;
+    else
+        cout<<"I become the guy."<<endl;
+}

@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m,i;
+    cin>>n>>m;
+    for(i=0;;i++)
+    {
+        if(n>m)
+            break;
+        n*=3;
+        m*=2;
+    }
+    cout<<i<<endl;
+}

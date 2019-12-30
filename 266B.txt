@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,t; string s;
+    cin>>n>>t;
+    cin>>s;
+    for(int i=1;i<=t;i++)
+    {
+        for(int j=0;s[j]!='\0';j++)
+        {
+            if(j== s.length()-1)
+                continue;
+            else
+            {
+                if(s[j]=='B' && s[j+1]=='G')
+                {
+                    s[j+1]='B';
+                    s[j]='G';
+                    j++;
+                }
+            }
+        }
+    }
+    cout<<s<<endl;
+}

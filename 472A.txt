@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+double a[100005];
+int main()
+{
+    int n,a,b,x;
+    cin>>n;
+    if(n%2==0)
+    {
+        a=n/2;
+        if(a%2==0)
+            cout<<a<<" "<<a<<endl;
+        else
+        {
+            a=a-1;
+            b=n-a;
+            cout<<a<<" "<<b<<endl;
+        }
+    }
+    else
+    {
+        int flag=0;
+        x=n/2;
+        if(x%2!=0)
+            x=x-1;
+        for(int i=x; i>=4; i-=2)
+        {
+            b=n-i;
+            for(int j=3; j<b; j+=2)
+            {
+                if(b%j==0)
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==1)
+                break;
+        }
+        cout<<n-b<<" "<<b<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    unsigned long long int n,counter=0,i,x;
+    cin>>n;
+    for(i=n;i!=0;i/=10)
+    {
+        x=i%10;
+        if(x==4 || x==7)
+            counter++;
+    }
+    if(counter==4 || counter==7)
+        cout<<"YES"<<endl;
+    else
+        cout<<"NO"<<endl;
+}

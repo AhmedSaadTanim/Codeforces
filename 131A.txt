@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s; int flag=0;
+    cin>>s;
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if(s[i]>='a' && s[i]<='z' && i!=0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    cout<<s;
+    else
+    {
+        for(int i=0;s[i]!='\0';i++)
+        {
+            if(s[i]>='a' && s[i]<='z')
+                s[i]=s[i]-32;
+            else
+                s[i]+=32;
+        }
+        cout<<s;
+    }
+}

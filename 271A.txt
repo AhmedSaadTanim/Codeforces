@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,a,b,c,d,i;
+    cin>>n;
+    i=n+1;
+    n+=1;
+    for(;;)
+    {
+        a=i%10;
+        i/=10;
+        b=i%10;
+        i/=10;
+        c=i%10;
+        i/=10;
+        d=i%10;
+        if(a==b || a==c || a==d || b==c || b==d || c==d)
+        {
+            n+=1;
+            i=n;
+        }
+        else
+            break;
+    }
+    cout<<d<<c<<b<<a<<endl;
+    return 0;
+}
